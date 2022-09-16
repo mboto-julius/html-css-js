@@ -10,10 +10,6 @@ This repo is just for keeping track of simple project about HTML, CSS and JAVASC
 
 Thats it!!!!
 
-### Please note that!
-
-Also there is a database called users having id, username and password columns, so you have to create your own database!
-
 ## Author
 
 - Linkedin - [mboto-julius](https://www.linkedin.com/in/julius-mboto-878961230/)
