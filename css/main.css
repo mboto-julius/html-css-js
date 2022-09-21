@@ -63,6 +63,12 @@ body{
     width: 300px;
 }
 
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+
 .form-control input{
     background-color: transparent;
     border: 0;
