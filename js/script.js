@@ -1,22 +1,14 @@
-const description = "We need a new floor";
-const squareMeter = 100;
-const floorOption = ["carpet", "hood", "titles"];
-const renovationJob = {
-  ownerName: "John",
-  maximumPrice: 8000,
-  category: "bathroam",
-  newShower: true,
-};
-const error = {
-  statusCode: 404,
-  description: "Server Error",
-  retry: true,
-};
-// console.log(error.statusCode);
-// traditional functions vs arrow  functions
-function calculatePrice() {
-  const price = 1000 + 3000;
-  console.log(price);
+
+let h1Element = document.getElementById('heading');
+h1Element.firstChild.nodeValue = "The Get Method (DOM)";
+h1Element.style.color = 'yellow';
+
+let pElements = document.getElementsByTagName('p'); // HTML COLLECTION
+for(let pElement of pElements){
+  pElement.style.color = 'green';
 }
-// invoke or call the function
-calculatePrice();
+
+let customDiv = document.getElementsByClassName('custom-bg');
+for(let element of customDiv){
+  element.style.backgroundColor = 'dimgrey';
+}

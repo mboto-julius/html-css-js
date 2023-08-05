@@ -4,13 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS</title>
+    <title>JS CONCEPT (DOM)</title>
     <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
-    <div class="container">
-      <h3>JS CONCEPT</h3>
+    <h1 id="heading">Introduction To Document Object Model</h1>
+    <p>This is some content to display in the document</p>
+
+    <div class="custom-bg">
+      <p>Here is more content inside a div element.</p>
+      <div>
+        <p>And even more content inside a nested div element.</p>
+      </div>
     </div>
+
+    <div>
+      <button onclick="document.body.classList.toggle('theme')">Toggle Style</button>
+    </div>
+
     <script src="/js/script.js"></script>
   </body>
 </html>

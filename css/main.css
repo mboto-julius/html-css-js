@@ -11,3 +11,13 @@
   justify-content: center;
   padding-top: 10%;
 }
+
+body{
+  background-color: black;
+  color:white;
+}
+
+.theme{
+  background-color: rgb(197, 32, 32);
+  color:white;
+}
