@@ -6,18 +6,21 @@
   box-sizing: border-box;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  padding-top: 10%;
+h1{
+   color: teal; 
+   margin-bottom: 10px;
 }
 
-body{
-  background-color: black;
-  color:white;
+#bear-photo{
+  width: 400px;
+  margin-top: 10px;
 }
 
-.theme{
-  background-color: rgb(197, 32, 32);
-  color:white;
+.special{
+  border: 1px solid #1abe20;
+  margin: 10px 0;
+}
+
+input[type='password']{
+  padding: 10px 0;
 }
