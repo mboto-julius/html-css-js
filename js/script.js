@@ -1,40 +1,30 @@
 'use strict';
 
-// console.log(document.querySelector('.message').textContent);
-// document.querySelector('.message').textContent = '🔥 Correct Number!';
-// document.querySelector('.number').textContent = 13;
-// document.querySelector('.score').textContent = 10;
-// document.querySelector('.guess').value = 23;
+const modal = document.querySelector('.modal');
+const overlay = document.querySelector('.overlay');
+const btnCloseModel = document.querySelector('.close-modal');
+const btnsOpenModel = document.querySelectorAll('.show-modal');
 
-const secretNumber = Math.trunc(Math.random()*20) + 1;
-let score = 20;
-document.querySelector('.number').textContent = secretNumber;
+const openModel = function(){
+    modal.classList.remove('hidden');
+    overlay.classList.remove('hidden');
+};
 
-document.querySelector('.check').addEventListener('click', function(){
-    const guess = Number(document.querySelector('.guess').value);
-    // console.log(guess, typeof guess);
-    if(!guess){
-        document.querySelector('.message').textContent = '🤪 No Number!';
-    }else if (guess === secretNumber){
-        document.querySelector('.message').textContent = '👍 Correct Number!';
-    }else if (guess > secretNumber){
-        if(score > 1){
-            document.querySelector('.message').textContent = '📈 Too High!';
-            score--;
-            document.querySelector('.score').textContent = score;
-        }else{
-            document.querySelector('.message').textContent = '🥵 You lost the game!';
-            document.querySelector('.score').textContent = 0;
-        }
-    }else if (guess < secretNumber){
-        if(score > 1){
-            document.querySelector('.message').textContent = '📉 Too Low!';
-            score--;
-            document.querySelector('.score').textContent = score;
-        }else{
-            document.querySelector('.message').textContent = '🥵 You lost the game!';
-            document.querySelector('.score').textContent = 0;
-        }
+for(let i=0; i<btnsOpenModel.length; i++ ){
+    btnsOpenModel[i].addEventListener('click', openModel);
+} 
+
+const closeModal = function(){
+    modal.classList.add('hidden');
+    overlay.classList.add('hidden');
+};
+
+btnCloseModel.addEventListener('click', closeModal); 
+overlay.addEventListener('click', closeModal);
+
+document.addEventListener('keydown', function(e){
+    // console.log(e.key);
+    if(e.key === 'Escape' && !modal.classList.contains('hidden')){
+        closeModal();
     }
 });
-
